@@ -1,0 +1,113 @@
+/*============LIGHT============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --bg-content: #FFFFFF;
+    --bg-card: #E1E1E6;
+    --bg-card-selected: #02799D;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background: var(--bg-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.timer {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.time {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    line-height: 14.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.controls {
+    width: 25rem;
+    height: 4.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.cards {
+    width: 26rem;
+    height:26rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-areas: "A B""C D";
+}
+.card-forest,
+.card-rain,
+.card-coffeeshop,
+.card-fireplace {
+    width: 12rem;
+    height: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.4rem;
+    background-color: var(--bg-card);
+}
+.svg-forest {
+    margin-bottom: 10rem;
+}
+.selected {
+    fill: white;
+    background-color: var(--bg-card-selected);
+}
+/*============DARK MODE============*/
+.time-dark {
+    color: #FFFFFF;
+}
+.controls-dark {
+    fill: #C4C4CC;
+}
+.cards-dark {
+    fill: #C4C4CC;
+    background-color: #29292E;
+}
+.cards-selected-dark {
+    fill: #FFFFFF;
+    background-color: #0A3442;;
+}
