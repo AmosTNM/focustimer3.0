@@ -12,13 +12,13 @@ function Mode({
     svgIncrease,
     svgDecrease,
     cardForest,
-    svgForest,
+    pathForest,
     cardRain,
-    svgRain,
+    pathRain,
     cardCoffeeshop,
-    svgCoffeeshop,
+    pathCoffeeshop,
     cardFireplace,
-    svgFireplace
+    pathFireplace
 }) {
     function light() {
         iconLight.classList.add('hide')
@@ -34,13 +34,13 @@ function Mode({
         svgIncrease.classList.add('controls-dark')
         svgDecrease.classList.add('controls-dark')
         cardForest.classList.add('cards-dark')
-        svgForest.classList.add('cards-dark')
+        pathForest.classList.add('cards-dark')
         cardRain.classList.add('cards-dark')
-        svgRain.classList.add('cards-dark')
+        pathRain.classList.add('cards-dark')
         cardCoffeeshop.classList.add('cards-dark')
-        svgCoffeeshop.classList.add('cards-dark')
+        pathCoffeeshop.classList.add('cards-dark')
         cardFireplace.classList.add('cards-dark')
-        svgFireplace.classList.add('cards-dark')
+        pathFireplace.classList.add('cards-dark')
     }
     function dark() {
         iconLight.classList.remove('hide')
@@ -56,13 +56,13 @@ function Mode({
         svgIncrease.classList.remove('controls-dark')
         svgDecrease.classList.remove('controls-dark')
         cardForest.classList.remove('cards-dark')
-        svgForest.classList.remove('cards-dark')
+        pathForest.classList.remove('cards-dark')
         cardRain.classList.remove('cards-dark')
-        svgRain.classList.remove('cards-dark')
+        pathRain.classList.remove('cards-dark')
         cardCoffeeshop.classList.remove('cards-dark')
-        svgCoffeeshop.classList.remove('cards-dark')
+        pathCoffeeshop.classList.remove('cards-dark')
         cardFireplace.classList.remove('cards-dark')
-        svgFireplace.classList.remove('cards-dark')
+        pathFireplace.classList.remove('cards-dark')
     }
     return {
         light, dark

@@ -17,6 +17,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background 300ms;
 }
 .content {
     width: 100%;
@@ -28,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    transition: background 300ms;
 }
 .timer {
     width: 30rem;
@@ -88,22 +90,22 @@ button {
     justify-content: center;
     border-radius: 2.4rem;
     background-color: var(--bg-card);
-}
-.svg-forest {
-    margin-bottom: 10rem;
+    transition: background 300ms;
 }
 .selected {
     fill: white;
     background-color: var(--bg-card-selected);
+    transition: background 300ms;
 }
 
 @media (min-width: 1024px) {
     body {
-            font-family: 'Roboto', sans-serif;
-            height: 100vh;
-            display: grid;
-            place-content: center;
-        }
+        font-family: 'Roboto', sans-serif;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+        transition: background 0.3s;
+    }
     
     .content {
         position: relative;
@@ -114,6 +116,7 @@ button {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        transition: background 0.3s;
         gap: 19.2rem;
     }
 
@@ -193,33 +196,66 @@ button {
 
         border-radius: 2.4rem;
         background-color: var(--bg-card);
-    }
-
-    .svg-forest {
-        margin-bottom: 10rem;
+        transition: background-color 300ms;
     }
 
     .selected {
         fill: white;
         background-color: var(--bg-card-selected);
+        transition: background-color 300ms;
     }
+}
+/*=============RANGE===============*/
+.card-forest-controls,
+.card-rain-controls,
+.card-coffeeshop-controls,
+.card-fireplace-controls {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.card-forest,
+.card-rain,
+.card-coffeeshop,
+.card-fireplace {
+    position: relative;
+}
+.svg-forest,
+.svg-rain,
+.svg-coffeeshop,
+.svg-fireplace {
+    position: absolute;
+    top: 2.4rem;
+}
+#range-forest,
+#range-rain,
+#range-coffeeshop,
+#range-fireplace {
+    position: absolute;
+    width: 9rem;
+    height: .4rem;
+    bottom: 2.4rem;
 }
 
 /*============DARK MODE============*/
 .time-dark {
     color: #FFFFFF;
+    transition: color 300ms;
 }
 
 .controls-dark {
     fill: #C4C4CC;
+    transition: fill 300ms;
 }
 
 .cards-dark {
     fill: #C4C4CC;
     background-color: #29292E;
+    transition: background-color 300ms;
 }
 
 .cards-selected-dark {
     fill: #FFFFFF;
     background-color: #0A3442;
+    transition: background-color 300ms;
 }

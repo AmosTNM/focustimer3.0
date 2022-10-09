@@ -1,39 +1,14 @@
 import {
-  displayMinutes,
-  displaySeconds,
-  numberMinutes,
-  numberSeconds,
-  countDown,
-  play,
-  pause,
-  stop,
-  increase,
-  decrease,
-  cardForest,
-  cardRain,
-  cardCoffeeshop,
-  cardFireplace,
-  svgForest,
-  svgRain,
-  svgCoffeeshop,
-  svgFireplace,
-  audioForest,
-  audioRain,
-  audioCoffeeshop,
-  audioFireplace,
-  audioAlertTimer,
-  iconLight,
-  iconDark,
-  darkBody,
-  darkContent,
-  darkMinutes,
-  darkTwoDots,
-  darkSeconds,
-  svgPlay,
-  svgPause,
-  svgStop,
-  svgIncrease,
-  svgDecrease
+    displayMinutes, displaySeconds, numberMinutes, numberSeconds, countDown,
+    play, pause, stop, increase, decrease,
+    cardForest, cardRain, cardCoffeeshop, cardFireplace,
+    svgForest, svgRain, svgCoffeeshop, svgFireplace,
+    pathForest, pathRain, pathCoffeeshop, pathFireplace,
+    rangeForest, rangeRain, rangeCoffeeshop, rangeFireplace,
+    audioForest, audioRain, audioCoffeeshop, audioFireplace, audioAlertTimer,
+    iconLight, iconDark, darkBody, darkContent,
+    darkMinutes, darkTwoDots, darkSeconds,
+    svgPlay, svgPause, svgStop, svgIncrease, svgDecrease
 } from "./elements.js";
 import { Controls } from "./controls.js";
 import { Cards } from "./cards.js";
@@ -55,13 +30,13 @@ const mode = Mode({
   svgIncrease,
   svgDecrease,
   cardForest,
-  svgForest,
+  pathForest,
   cardRain,
-  svgRain,
+  pathRain,
   cardCoffeeshop,
-  svgCoffeeshop,
+  pathCoffeeshop,
   cardFireplace,
-  svgFireplace
+  pathFireplace
 })
 const controls = Controls({
   play,
@@ -73,16 +48,16 @@ const controls = Controls({
 });
 const cards = Cards({
   cardForest,
-  svgForest,
+  pathForest,
   audioForest,
   cardRain,
-  svgRain,
+  pathRain,
   audioRain,
   cardCoffeeshop,
-  svgCoffeeshop,
+  pathCoffeeshop,
   audioCoffeeshop,
   cardFireplace,
-  svgFireplace,
+  pathFireplace,
   audioFireplace,
 });
 const timer = Timer({
@@ -96,23 +71,14 @@ const timer = Timer({
   cards,
 });
 const events = Events({
-  timer,
-  controls,
-  play,
-  pause,
-  stop,
-  increase,
-  decrease,
-  cards,
-  cardForest,
-  cardRain, cardCoffeeshop, cardFireplace,
-  audioForest,
-  audioRain,
-  audioCoffeeshop,
-  audioFireplace,
-  mode,
-  iconLight,
-  iconDark
+    timer,
+    controls,
+    play, pause, stop, increase, decrease,
+    cards,
+    cardForest, cardRain, cardCoffeeshop, cardFireplace,
+    audioForest, audioRain, audioCoffeeshop, audioFireplace,
+    mode, iconLight, iconDark,
+    rangeForest, rangeRain, rangeCoffeeshop, rangeFireplace
 });
 
-{ events.eventsControls(), events.eventsCards(), events.eventsMode() }
+{ events.eventsControls(), events.eventsCards(), events.eventsMode(), events.eventsRange() }

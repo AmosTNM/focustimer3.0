@@ -1,11 +1,11 @@
-
 function Events({
     timer, controls,
     play, pause, stop, increase, decrease,
     cards,
     cardForest, cardRain, cardCoffeeshop, cardFireplace,
     audioForest, audioRain, audioCoffeeshop, audioFireplace,
-    mode, iconLight, iconDark
+    mode, iconLight, iconDark,
+    rangeForest, rangeRain, rangeCoffeeshop, rangeFireplace
 }) {    
     function eventsControls() {
         play.addEventListener('click', () => {
@@ -133,9 +133,24 @@ function Events({
             }
         })
     }
+    function eventsRange() {
+        rangeForest.addEventListener('change', () => {
+            audioForest.volume = rangeForest.value
+        })
+        rangeRain.addEventListener('change', () => {
+            audioRain.volume = rangeRain.value
+        })
+        rangeCoffeeshop.addEventListener('change', () => {
+            audioCoffeeshop.volume = rangeCoffeeshop.value
+        })
+        rangeFireplace.addEventListener('change', () => {
+            audioFireplace.volume = rangeFireplace.value
+        })
+    }
     return {
         eventsControls,
         eventsCards,
-        eventsMode
+        eventsMode,
+        eventsRange
     }
 } export { Events }
