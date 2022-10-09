@@ -1,3 +1,4 @@
+
 function Events({
     timer, controls,
     play, pause, stop, increase, decrease,
@@ -33,40 +34,68 @@ function Events({
     function eventsCards() {
         cardForest.addEventListener('click', () => {
             if (audioForest.paused == true) {
-                cards.enableForest()
-                cards.disableRain()
-                cards.disableCoffeeshop()
-                cards.disableFireplace()
+                if (!iconLight.classList.contains('hide')) {
+                    cards.enableForest()
+                    cards.disableRain()
+                    cards.disableCoffeeshop()
+                    cards.disableFireplace()
+                } else {
+                    cards.enableDarkForest()
+                    cards.disableRain()
+                    cards.disableCoffeeshop()
+                    cards.disableFireplace()
+                }
             } else {
-                cards.disableForest()
-            }
+                cards.disableForest()    
+                }
         })
         cardRain.addEventListener('click', () => {
             if (audioRain.paused == true) {
-                cards.enableRain()
-                cards.disableForest()
-                cards.disableCoffeeshop()
-                cards.disableFireplace()
+                if (!iconLight.classList.contains('hide')) {
+                    cards.enableRain()
+                    cards.disableForest()
+                    cards.disableCoffeeshop()
+                    cards.disableFireplace()
+                } else {
+                    cards.enableDarkRain()
+                    cards.disableForest()
+                    cards.disableCoffeeshop()
+                    cards.disableFireplace()
+                }
             } else {
                 cards.disableRain()
             }
         })
         cardCoffeeshop.addEventListener('click', () => {
             if (audioCoffeeshop.paused == true) {
-                cards.enableCoffeeshop()
-                cards.disableForest()
-                cards.disableRain()
-                cards.disableFireplace()
+                if (!iconLight.classList.contains('hide')) {
+                    cards.enableCoffeeshop()
+                    cards.disableForest()
+                    cards.disableRain()
+                    cards.disableFireplace()              
+                } else {
+                    cards.enableDarkCoffeeshop()
+                    cards.disableForest()
+                    cards.disableRain()
+                    cards.disableFireplace()
+                }
             } else {
                 cards.disableCoffeeshop()
             }
         })
         cardFireplace.addEventListener('click', () => {
             if (audioFireplace.paused == true) {
-                cards.enableFireplace()
-                cards.disableForest()        
-                cards.disableRain()
-                cards.disableCoffeeshop()
+                if (!iconLight.classList.contains('hide')) {
+                    cards.enableFireplace()
+                    cards.disableForest()        
+                    cards.disableRain()
+                    cards.disableCoffeeshop()
+                } else {
+                    cards.enableDarkFireplace()
+                    cards.disableForest()        
+                    cards.disableRain()
+                    cards.disableCoffeeshop()
+                }
             } else {
                 cards.disableFireplace()
             }
@@ -75,9 +104,33 @@ function Events({
     function eventsMode() {
         iconLight.addEventListener('click', () => {
             mode.light()
+            if (!audioForest.paused == true) {
+                cards.enableDarkForest()
+            }
+            if (!audioRain.paused == true) {
+                cards.enableDarkRain()
+            }
+            if (!audioCoffeeshop.paused == true) {
+                cards.enableDarkCoffeeshop()
+            }
+            if (!audioFireplace.paused == true) {
+                cards.enableDarkFireplace()
+            }
         })
         iconDark.addEventListener('click', () => {
             mode.dark()
+            if (!audioForest.paused == true) {
+                cards.enableForest()
+            }
+            if (!audioRain.paused == true) {
+                cards.enableRain()
+            }
+            if (!audioCoffeeshop.paused == true) {
+                cards.enableCoffeeshop()
+            }
+            if (!audioFireplace.paused == true) {
+                cards.enableFireplace()
+            }
         })
     }
     return {
