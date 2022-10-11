@@ -35,6 +35,9 @@ Aqui está o [**link**](https://www.figma.com/file/1h69rJP7N8nhVT5duo2WkZ/Stage-
 		Quando selecionado, o card irá mudar de cor e emitir um som diferente (Floresta, Chuva, Cafeteria e Lareira).
 		
 		Os cards são desabilitados com click, stop, escolha de outro card ou finalização do tempo.
+		
+		Por padrão, ao clicar em qualquer área de um card, o volume retornará para 50%.
+		
 
 **📱 Link da Aplicação:**
 
