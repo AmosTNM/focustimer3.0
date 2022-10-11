@@ -1,8 +1,16 @@
 function Cards({
-    cardForest, pathForest, audioForest,
-    cardRain, pathRain, audioRain,
-    cardCoffeeshop, pathCoffeeshop, audioCoffeeshop,
-    cardFireplace, pathFireplace, audioFireplace,
+    cardForest,
+    pathForest,
+    audioForest,
+    cardRain,
+    pathRain,
+    audioRain,
+    cardCoffeeshop,
+    pathCoffeeshop,
+    audioCoffeeshop,
+    cardFireplace,
+    pathFireplace,
+    audioFireplace,
 }){
     function enableForest() {
         audioForest.play()

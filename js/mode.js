@@ -1,6 +1,7 @@
 function Mode({
     iconLight,
     iconDark,
+    audio_On_Off,
     darkBody,
     darkContent,
     darkMinutes,
@@ -18,11 +19,16 @@ function Mode({
     cardCoffeeshop,
     pathCoffeeshop,
     cardFireplace,
-    pathFireplace
+    pathFireplace,
+    rangeForestMode,
+    rangeRainMode,
+    rangeCoffeeshopMode,
+    rangeFireplaceMode
 }) {
     function light() {
         iconLight.classList.add('hide')
         iconDark.classList.remove('hide')
+        audio_On_Off.play()
         darkBody.background = "#121214"
         darkContent.background = "#121214"
         darkMinutes.classList.add('time-dark')
@@ -41,10 +47,15 @@ function Mode({
         pathCoffeeshop.classList.add('cards-dark')
         cardFireplace.classList.add('cards-dark')
         pathFireplace.classList.add('cards-dark')
+        rangeForestMode.classList.add('dark')
+        rangeRainMode.classList.add('dark')
+        rangeCoffeeshopMode.classList.add('dark')
+        rangeFireplaceMode.classList.add('dark')
     }
     function dark() {
         iconLight.classList.remove('hide')
         iconDark.classList.add('hide')
+        audio_On_Off.play()
         darkBody.background = "#FFFFFF"
         darkContent.background = "#FFFFFF"
         darkMinutes.classList.remove('time-dark')
@@ -63,6 +74,10 @@ function Mode({
         pathCoffeeshop.classList.remove('cards-dark')
         cardFireplace.classList.remove('cards-dark')
         pathFireplace.classList.remove('cards-dark')
+        rangeForestMode.classList.remove('dark')
+        rangeRainMode.classList.remove('dark')
+        rangeCoffeeshopMode.classList.remove('dark')
+        rangeFireplaceMode.classList.remove('dark')
     }
     return {
         light, dark

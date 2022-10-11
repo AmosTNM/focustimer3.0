@@ -1,8 +1,12 @@
 function Timer({
     countDown,
-    numberMinutes, numberSeconds,
-    displayMinutes, displaySeconds,
-    audioAlertTimer, controls, cards, 
+    numberMinutes,
+    numberSeconds,
+    displayMinutes,
+    displaySeconds,
+    audioAlertTimer,
+    controls,
+    cards, 
 }) {
     function play() {
         countDown = setInterval(() => {

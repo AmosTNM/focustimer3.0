@@ -35,9 +35,14 @@ const audioRain= new Audio('./assets/Chuva.wav')
 const audioCoffeeshop = new Audio('./assets/Cafeteria.wav')
 const audioFireplace = new Audio('./assets/Lareira.wav')
 const audioAlertTimer = new Audio("./assets/Alerta.mp3")
+const audio_On_Off = new Audio("./assets/on-off.wav")
 
 const iconLight = document.querySelector(".light");
 const iconDark = document.querySelector(".dark");
+const rangeForestMode = document.querySelector('.range-forest-mode');
+const rangeRainMode = document.querySelector('.range-rain-mode');
+const rangeCoffeeshopMode = document.querySelector('.range-coffeeshop-mode');
+const rangeFireplaceMode = document.querySelector('.range-fireplace-mode');
 
 const darkBody = document.body.style;
 const darkContent = document.querySelector(".content").style;
@@ -53,14 +58,52 @@ const svgIncrease = document.querySelector(".svg-increase");
 const svgDecrease = document.querySelector(".svg-decrease");
 
 export {
-    displayMinutes, displaySeconds, numberMinutes, numberSeconds, countDown,
-    play, pause, stop, increase, decrease,
-    cardForest, cardRain, cardCoffeeshop, cardFireplace,
-    svgForest, svgRain, svgCoffeeshop, svgFireplace,
-    pathForest, pathRain, pathCoffeeshop, pathFireplace,
-    rangeForest, rangeRain, rangeCoffeeshop, rangeFireplace,
-    audioForest, audioRain, audioCoffeeshop, audioFireplace, audioAlertTimer,
-    iconLight, iconDark, darkBody, darkContent,
-    darkMinutes, darkTwoDots, darkSeconds,
-    svgPlay, svgPause, svgStop, svgIncrease, svgDecrease
+    displayMinutes,
+    displaySeconds,
+    numberMinutes,
+    numberSeconds,
+    countDown,
+    play,
+    pause,
+    stop,
+    increase,
+    decrease,
+    cardForest,
+    cardRain,
+    cardCoffeeshop,
+    cardFireplace,
+    svgForest,
+    svgRain,
+    svgCoffeeshop,
+    svgFireplace,
+    pathForest,
+    pathRain,
+    pathCoffeeshop,
+    pathFireplace,
+    rangeForest,
+    rangeRain,
+    rangeCoffeeshop,
+    rangeFireplace,
+    rangeForestMode,
+    rangeRainMode,
+    rangeCoffeeshopMode,
+    rangeFireplaceMode,
+    audioForest,
+    audioRain,
+    audioCoffeeshop,
+    audioFireplace,
+    audioAlertTimer,
+    audio_On_Off,
+    iconLight,
+    iconDark,
+    darkBody,
+    darkContent,
+    darkMinutes,
+    darkTwoDots,
+    darkSeconds,
+    svgPlay,
+    svgPause,
+    svgStop,
+    svgIncrease,
+    svgDecrease
 }

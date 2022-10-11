@@ -1,11 +1,27 @@
 function Events({
-    timer, controls,
-    play, pause, stop, increase, decrease,
+    timer,
+    controls,
+    play,
+    pause,
+    stop,
+    increase,
+    decrease,
     cards,
-    cardForest, cardRain, cardCoffeeshop, cardFireplace,
-    audioForest, audioRain, audioCoffeeshop, audioFireplace,
-    mode, iconLight, iconDark,
-    rangeForest, rangeRain, rangeCoffeeshop, rangeFireplace
+    cardForest,
+    cardRain,
+    cardCoffeeshop,
+    cardFireplace,
+    audioForest,
+    audioRain,
+    audioCoffeeshop,
+    audioFireplace,
+    mode,
+    iconLight,
+    iconDark,
+    rangeForest,
+    rangeRain,
+    rangeCoffeeshop,
+    rangeFireplace
 }) {    
     function eventsControls() {
         play.addEventListener('click', () => {
@@ -35,6 +51,7 @@ function Events({
         cardForest.addEventListener('click', () => {
             if (audioForest.paused == true) {
                 if (!iconLight.classList.contains('hide')) {
+                    audioForest.volume = rangeForest.value
                     cards.enableForest()
                     cards.disableRain()
                     cards.disableCoffeeshop()
@@ -52,6 +69,7 @@ function Events({
         cardRain.addEventListener('click', () => {
             if (audioRain.paused == true) {
                 if (!iconLight.classList.contains('hide')) {
+                    audioRain.volume = rangeRain.value
                     cards.enableRain()
                     cards.disableForest()
                     cards.disableCoffeeshop()
@@ -69,6 +87,7 @@ function Events({
         cardCoffeeshop.addEventListener('click', () => {
             if (audioCoffeeshop.paused == true) {
                 if (!iconLight.classList.contains('hide')) {
+                    audioCoffeeshop.volume = rangeCoffeeshop.value
                     cards.enableCoffeeshop()
                     cards.disableForest()
                     cards.disableRain()
@@ -86,6 +105,7 @@ function Events({
         cardFireplace.addEventListener('click', () => {
             if (audioFireplace.paused == true) {
                 if (!iconLight.classList.contains('hide')) {
+                    audioFireplace.volume = rangeFireplace.value
                     cards.enableFireplace()
                     cards.disableForest()        
                     cards.disableRain()
