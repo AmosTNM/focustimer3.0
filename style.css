@@ -240,7 +240,7 @@ button {
 .svg-coffeeshop,
 .svg-fireplace {
     position: absolute;
-    top: 2.4rem;
+    top: 1.25rem;
 }
 
 #range-forest,
@@ -250,7 +250,7 @@ button {
     position: absolute;
     width: 9rem;
     height: .4rem;
-    bottom: 2.4rem;
+    bottom: 1.25rem;
 }
 
 input[type=range] {
