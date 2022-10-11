@@ -254,7 +254,7 @@ button {
 }
 
 input[type=range] {
-    -webkit-appearance: none;
+    appearance: none;
     max-width: 90rem;
     background-color: transparent;
 }
@@ -270,7 +270,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     width: 16px;
     height: 16px;
     background: var(--range-color);
@@ -292,7 +292,7 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     width: 16px;
     height: 16px;
     background: var(--range-color);
