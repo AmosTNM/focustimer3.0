@@ -11,6 +11,10 @@ function Cards({
     cardFireplace,
     pathFireplace,
     audioFireplace,
+    rangeForest,
+    rangeRain,
+    rangeCoffeeshop,
+    rangeFireplace
 }){
     function enableForest() {
         audioForest.play()
@@ -84,6 +88,7 @@ function Cards({
         pathForest.classList.remove('selected')
         cardForest.classList.remove('cards-selected-dark')
         pathForest.classList.remove('cards-selected-dark')
+        rangeForest.value = '0.5'
     }
     function disableRain() {
         audioRain.pause()
@@ -91,6 +96,7 @@ function Cards({
         pathRain.classList.remove('selected')
         cardRain.classList.remove('cards-selected-dark')
         pathRain.classList.remove('cards-selected-dark')
+        rangeRain.value = '0.5'
     }
     function disableCoffeeshop() {
         audioCoffeeshop.pause()
@@ -98,7 +104,7 @@ function Cards({
         pathCoffeeshop.classList.remove('selected')
         cardCoffeeshop.classList.remove('cards-selected-dark')
         pathCoffeeshop.classList.remove('cards-selected-dark')
-        
+        rangeCoffeeshop.value = '0.5'
     }
     function disableFireplace() {
         audioFireplace.pause()
@@ -106,6 +112,7 @@ function Cards({
         pathFireplace.classList.remove('selected')
         cardFireplace.classList.remove('cards-selected-dark')
         pathFireplace.classList.remove('cards-selected-dark')
+        rangeFireplace.value = '0.5'
     }
 
     return {

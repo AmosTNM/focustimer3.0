@@ -98,6 +98,10 @@ const cards = Cards({
   cardFireplace,
   pathFireplace,
   audioFireplace,
+  rangeForest,
+  rangeRain,
+  rangeCoffeeshop,
+  rangeFireplace
 });
 const timer = Timer({
   countDown,
