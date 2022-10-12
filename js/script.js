@@ -21,10 +21,10 @@ import {
   rangeRain,
   rangeCoffeeshop,
   rangeFireplace,
-  rangeForestMode,
-  rangeRainMode,
-  rangeCoffeeshopMode,
-  rangeFireplaceMode,
+  rangeForestTurnColor,
+  rangeRainTurnColor,
+  rangeCoffeeshopTurnColor,
+  rangeFireplaceTurnColor,
   audioForest,
   audioRain,
   audioCoffeeshop,
@@ -72,10 +72,10 @@ const mode = Mode({
   pathCoffeeshop,
   cardFireplace,
   pathFireplace,
-  rangeForestMode,
-  rangeRainMode,
-  rangeCoffeeshopMode,
-  rangeFireplaceMode
+  rangeForestTurnColor,
+  rangeRainTurnColor,
+  rangeCoffeeshopTurnColor,
+  rangeFireplaceTurnColor
 })
 const controls = Controls({
   play,
@@ -101,7 +101,12 @@ const cards = Cards({
   rangeForest,
   rangeRain,
   rangeCoffeeshop,
-  rangeFireplace
+  rangeFireplace,
+  iconLight,
+  rangeForestTurnColor,
+  rangeRainTurnColor,
+  rangeCoffeeshopTurnColor,
+  rangeFireplaceTurnColor,
 });
 const timer = Timer({
   countDown,

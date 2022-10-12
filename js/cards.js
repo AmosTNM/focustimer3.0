@@ -14,7 +14,12 @@ function Cards({
     rangeForest,
     rangeRain,
     rangeCoffeeshop,
-    rangeFireplace
+    rangeFireplace,
+    iconLight,
+    rangeForestTurnColor,
+    rangeRainTurnColor,
+    rangeCoffeeshopTurnColor,
+    rangeFireplaceTurnColor,
 }){
     function enableForest() {
         audioForest.play()
@@ -23,6 +28,7 @@ function Cards({
         pathForest.classList.add('selected')
         cardForest.classList.remove('cards-selected-dark')
         pathForest.classList.remove('cards-selected-dark')
+        rangeForestTurnColor.classList.add('white')
     }
     function enableRain() {
         audioRain.play()
@@ -31,6 +37,7 @@ function Cards({
         pathRain.classList.add('selected')
         cardRain.classList.remove('cards-selected-dark')
         pathRain.classList.remove('cards-selected-dark')
+        rangeRainTurnColor.classList.add('white')
     }
     function enableCoffeeshop() {
         audioCoffeeshop.play()
@@ -39,6 +46,7 @@ function Cards({
         pathCoffeeshop.classList.add('selected')
         cardCoffeeshop.classList.remove('cards-selected-dark')
         pathCoffeeshop.classList.remove('cards-selected-dark')
+        rangeCoffeeshopTurnColor.classList.add('white')
     }
     function enableFireplace(){
         audioFireplace.play()
@@ -47,6 +55,7 @@ function Cards({
         pathFireplace.classList.add('selected')
         cardFireplace.classList.remove('cards-selected-dark')
         pathFireplace.classList.remove('cards-selected-dark')
+        rangeFireplaceTurnColor.classList.remove('white')   
     }
 
     function enableDarkForest() {
@@ -89,6 +98,9 @@ function Cards({
         cardForest.classList.remove('cards-selected-dark')
         pathForest.classList.remove('cards-selected-dark')
         rangeForest.value = '0.5'
+        if (!iconLight.classList.contains('hide')){
+            rangeForestTurnColor.classList.remove('white')   
+        }
     }
     function disableRain() {
         audioRain.pause()
@@ -97,6 +109,9 @@ function Cards({
         cardRain.classList.remove('cards-selected-dark')
         pathRain.classList.remove('cards-selected-dark')
         rangeRain.value = '0.5'
+        if (!iconLight.classList.contains('hide')){
+            rangeRainTurnColor.classList.remove('white')   
+        }
     }
     function disableCoffeeshop() {
         audioCoffeeshop.pause()
@@ -105,6 +120,9 @@ function Cards({
         cardCoffeeshop.classList.remove('cards-selected-dark')
         pathCoffeeshop.classList.remove('cards-selected-dark')
         rangeCoffeeshop.value = '0.5'
+        if (!iconLight.classList.contains('hide')){
+            rangeCoffeeshopTurnColor.classList.remove('white')   
+        }
     }
     function disableFireplace() {
         audioFireplace.pause()
@@ -113,6 +131,9 @@ function Cards({
         cardFireplace.classList.remove('cards-selected-dark')
         pathFireplace.classList.remove('cards-selected-dark')
         rangeFireplace.value = '0.5'
+        if (!iconLight.classList.contains('hide')){
+            rangeFireplaceTurnColor.classList.remove('white')   
+        }
     }
 
     return {

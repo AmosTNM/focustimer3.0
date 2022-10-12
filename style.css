@@ -19,7 +19,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 .content {
@@ -32,7 +32,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 .timer {
@@ -57,7 +57,7 @@ body {
 .two-dots,
 .seconds {
     color: #000000;
-    transition: color 250ms;
+    transition: color 200ms;
 }
 
 .controls {
@@ -104,13 +104,31 @@ button {
     justify-content: center;
     border-radius: 2.4rem;
     background-color: var(--bg-card);
-    transition: background 250ms;
+    transition: background 200ms;
+}
+
+.svg-forest,
+.svg-rain,
+.svg-coffeeshop,
+.svg-fireplace {
+    position: absolute;
+    top: 1.25rem;
+}
+
+#range-forest,
+#range-rain,
+#range-coffeeshop,
+#range-fireplace {
+    position: absolute;
+    width: 9rem;
+    height: .4rem;
+    bottom: 1.25rem;
 }
 
 .selected {
     fill: white;
     background-color: var(--bg-card-selected);
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 /*=============MEDIA===============*/
@@ -208,13 +226,31 @@ button {
         gap: 3.2rem;
         border-radius: 2.4rem;
         background-color: var(--bg-card);
-        transition: background-color 250ms;
+        transition: background-color 200ms;
+    }
+    
+    .svg-forest,
+    .svg-rain,
+    .svg-coffeeshop,
+    .svg-fireplace {
+        position: absolute;
+        top: 2.4rem;
+    }
+
+    #range-forest,
+    #range-rain,
+    #range-coffeeshop,
+    #range-fireplace {
+        position: absolute;
+        width: 9rem;
+        height: .4rem;
+        bottom: 2.4rem;
     }
 
     .selected {
         fill: white;
         background-color: var(--bg-card-selected);
-        transition: background-color 250ms;
+        transition: background-color 200ms;
     }
 }
 
@@ -235,28 +271,11 @@ button {
     position: relative;
 }
 
-.svg-forest,
-.svg-rain,
-.svg-coffeeshop,
-.svg-fireplace {
-    position: absolute;
-    top: 1.25rem;
-}
-
-#range-forest,
-#range-rain,
-#range-coffeeshop,
-#range-fireplace {
-    position: absolute;
-    width: 9rem;
-    height: .4rem;
-    bottom: 1.25rem;
-}
-
 input[type=range] {
     appearance: none;
     max-width: 90rem;
     background-color: transparent;
+    transition: background 200ms;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -266,7 +285,7 @@ input[type=range]::-webkit-slider-runnable-track {
     border-radius: 4px;
     border: 0px solid;
     cursor: pointer;
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -278,7 +297,7 @@ input[type=range]::-webkit-slider-thumb {
     border: 0px solid var(--range-color);
     margin-top: -6px;/*(16px - 4px)/2*/
     cursor: pointer;
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 input[type=range]::-moz-range-track {
@@ -288,7 +307,7 @@ input[type=range]::-moz-range-track {
     border-radius: 4px;
     border: 0px solid;
     cursor: pointer;
-    transition: background 250ms;
+    transition: background 200ms;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -300,32 +319,32 @@ input[type=range]::-moz-range-thumb {
     border: 0px solid var(--range-color);
     margin-top: -6px; /*(16px - 4px)/2*/
     cursor: pointer;
-    transition: background 250ms;
+    transition: background 200ms;
+}
+
+.white {
+    --range-color: white;
 }
 
 /*============DARK MODE============*/
 .time-dark {
     color: #FFFFFF;
-    transition: color 250ms;
+    transition: color 200ms;
 }
 
 .controls-dark {
     fill: #C4C4CC;
-    transition: fill 250ms;
+    transition: fill 200ms;
 }
 
 .cards-dark {
     fill: #C4C4CC;
     background-color: #29292E;
-    transition: background-color 250ms;
+    transition: background-color 200ms;
 }
 
 .cards-selected-dark {
     fill: #FFFFFF;
     background-color: #0A3442;
-    transition: background-color 250ms;
-}
-
-.dark {
-    --range-color: white;
+    transition: background-color 200ms;
 }

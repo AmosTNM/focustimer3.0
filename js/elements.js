@@ -39,10 +39,10 @@ const audio_On_Off = new Audio("./assets/on-off.wav")
 
 const iconLight = document.querySelector(".light");
 const iconDark = document.querySelector(".dark");
-const rangeForestMode = document.querySelector('.range-forest-mode');
-const rangeRainMode = document.querySelector('.range-rain-mode');
-const rangeCoffeeshopMode = document.querySelector('.range-coffeeshop-mode');
-const rangeFireplaceMode = document.querySelector('.range-fireplace-mode');
+const rangeForestTurnColor = document.querySelector('.range-forest-turn-color');
+const rangeRainTurnColor = document.querySelector('.range-rain-turn-color');
+const rangeCoffeeshopTurnColor = document.querySelector('.range-coffeeshop-turn-color');
+const rangeFireplaceTurnColor = document.querySelector('.range-fireplace-turn-color');
 
 const darkBody = document.body.style;
 const darkContent = document.querySelector(".content").style;
@@ -84,10 +84,10 @@ export {
     rangeRain,
     rangeCoffeeshop,
     rangeFireplace,
-    rangeForestMode,
-    rangeRainMode,
-    rangeCoffeeshopMode,
-    rangeFireplaceMode,
+    rangeForestTurnColor,
+    rangeRainTurnColor,
+    rangeCoffeeshopTurnColor,
+    rangeFireplaceTurnColor,
     audioForest,
     audioRain,
     audioCoffeeshop,

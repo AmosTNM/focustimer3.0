@@ -20,10 +20,10 @@ function Mode({
     pathCoffeeshop,
     cardFireplace,
     pathFireplace,
-    rangeForestMode,
-    rangeRainMode,
-    rangeCoffeeshopMode,
-    rangeFireplaceMode
+    rangeForestTurnColor,
+    rangeRainTurnColor,
+    rangeCoffeeshopTurnColor,
+    rangeFireplaceTurnColor
 }) {
     function light() {
         iconLight.classList.add('hide')
@@ -47,10 +47,10 @@ function Mode({
         pathCoffeeshop.classList.add('cards-dark')
         cardFireplace.classList.add('cards-dark')
         pathFireplace.classList.add('cards-dark')
-        rangeForestMode.classList.add('dark')
-        rangeRainMode.classList.add('dark')
-        rangeCoffeeshopMode.classList.add('dark')
-        rangeFireplaceMode.classList.add('dark')
+        rangeForestTurnColor.classList.add('white')
+        rangeRainTurnColor.classList.add('white')
+        rangeCoffeeshopTurnColor.classList.add('white')
+        rangeFireplaceTurnColor.classList.add('white')
     }
     function dark() {
         iconLight.classList.remove('hide')
@@ -74,10 +74,10 @@ function Mode({
         pathCoffeeshop.classList.remove('cards-dark')
         cardFireplace.classList.remove('cards-dark')
         pathFireplace.classList.remove('cards-dark')
-        rangeForestMode.classList.remove('dark')
-        rangeRainMode.classList.remove('dark')
-        rangeCoffeeshopMode.classList.remove('dark')
-        rangeFireplaceMode.classList.remove('dark')
+        rangeForestTurnColor.classList.remove('white')
+        rangeRainTurnColor.classList.remove('white')
+        rangeCoffeeshopTurnColor.classList.remove('white')
+        rangeFireplaceTurnColor.classList.remove('white')
     }
     return {
         light, dark

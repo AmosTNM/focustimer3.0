@@ -19,8 +19,8 @@
     <script src="./js/script.js" type="module" defer></script>
   </head>
   <body>
-    <div class="content">
-      <div class="mode-icon">
+    <main class="content">
+      <section class="mode-icon">
         <button class="light">
           <svg
             width="44"
@@ -49,8 +49,8 @@
             />
           </svg>
         </button>
-      </div>
-      <div class="timer">
+      </section>
+      <section class="timer">
         <div class="time">
           <span class="minutes">00</span>
           <span class="two-dots">:</span>
@@ -137,8 +137,8 @@
             </svg>
           </button>
         </div>
-      </div>
-      <div class="cards">
+      </section>
+      <section class="cards">
         <div class="card-forest-controls">
           <button class="card-forest">
             <svg
@@ -160,7 +160,7 @@
             type="range"
             name="range-forest"
             id="range-forest"
-            class="range-forest-mode"
+            class="range-forest-turn-color"
             min="0"
             max="1"
             step="0.01"
@@ -188,7 +188,7 @@
             type="range"
             name="range-rain"
             id="range-rain"
-            class="range-rain-mode"
+            class="range-rain-turn-color"
             min="0"
             max="1"
             step="0.01"
@@ -216,7 +216,7 @@
             type="range"
             name="range-coffeeshop"
             id="range-coffeeshop"
-            class="range-coffeeshop-mode"
+            class="range-coffeeshop-turn-color"
             min="0"
             max="1"
             step="0.01"
@@ -244,14 +244,14 @@
             type="range"
             name="range-fireplace"
             id="range-fireplace"
-            class="range-fireplace-mode"
+            class="range-fireplace-turn-color"
             min="0"
             max="1"
             step="0.01"
             value="0.5"
           />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
