@@ -55,7 +55,7 @@ function Cards({
         pathFireplace.classList.add('selected')
         cardFireplace.classList.remove('cards-selected-dark')
         pathFireplace.classList.remove('cards-selected-dark')
-        rangeFireplaceTurnColor.classList.remove('white')   
+        rangeFireplaceTurnColor.classList.add('white')   
     }
 
     function enableDarkForest() {
